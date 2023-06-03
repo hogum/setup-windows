@@ -11,3 +11,5 @@
 GitHub.GitHubDesktop
 Oracle.JavaRuntimeEnvironment JRE
 Cloudflare.Warp
+
+PerfectWorld.PerfectWorldArena
