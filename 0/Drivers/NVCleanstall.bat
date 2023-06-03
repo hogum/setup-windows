@@ -1,6 +1,6 @@
 @echo off
 set url=https://www.techpowerup.com/download/techpowerup-nvcleanstall/
-curl %url% | findstr /r /C:"<title>NVCleanstall v[0-9.]* Download | TechPowerUp</title>" > tmp
+curl %url% | find "<title>NVCleanstall v" > tmp
 for /f "tokens=2" %%a in (tmp) do set "latest=%%a"
 for /f "tokens=1 delims=v" %%a in ("%latest%") do set "latest=%%a"
 del tmp
