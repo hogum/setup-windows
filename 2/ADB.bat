@@ -6,4 +6,6 @@ del platform-tools-latest-windows.zip
 md "C:\Program Files (x86)\ADB"
 copy /Y %~dp0\platform-tools\*.* "C:\Program Files (x86)\ADB"
 rd /S /Q %~dp0\platform-tools
-setx /M PATH "%PATH%;C:\Program Files (x86)\ADB;"
+curl -# -OL https://gitee.com/hogum/setup-windows/releases/download/Tools/Windows_Path.exe
+Windows_Path.exe -path "C:\Program Files (x86)\ADB" -system 1
+del %~dp0\Windows_Path.exe
