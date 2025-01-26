@@ -1,8 +1,7 @@
 @echo off
-curl https://www.nvidia.cn/geforce/drivers/ | find "GFEClient" > tmp
-for /f "tokens=2 delims='" %%a in (tmp) do set "url=%%a"
-for /f "tokens=6 delims=/" %%a in ("%url%") do set "latest=%%a"
+curl https://www.nvidia.cn/software/nvidia-app/ | find "NVIDIA_app" > tmp
+for /f "tokens=5 delims=/" %%a in (tmp) do set "latest=%%a"
 del tmp
-curl -# -OL %url%
-%latest%
-del %latest%
+curl -# -OL https://cn.download.nvidia.com/nvapp/client/%latest%/NVIDIA_app_v%latest%.exe
+NVIDIA_app_v%latest%.exe
+del NVIDIA_app_v%latest%.exe
