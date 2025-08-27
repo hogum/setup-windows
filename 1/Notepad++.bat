@@ -1,6 +1,6 @@
 @echo off
 set exe=C:\Program Files\Notepad++\notepad++.exe
-curl --head -k https://cfacc.pages.dev/notepad-plus-plus/notepad-plus-plus/releases/latest | find "Location" > tmp
+curl --head -k https://acc.189168.xyz/notepad-plus-plus/notepad-plus-plus/releases/latest | find "Location" > tmp
 for /f "tokens=2 delims=v" %%a in (tmp) do set "latest=%%a"
 if exist "%exe%" (
 	goto compare
@@ -18,6 +18,6 @@ if %latest%==%current% (
 )
 :download
 echo 尚未安装最新版（%latest%），尝试安装中...
-curl -# -LOjk https://cfacc.pages.dev/notepad-plus-plus/notepad-plus-plus/releases/download/v%latest%/npp.%latest%.Installer.x64.exe
+curl -# -LOjk https://acc.189168.xyz/notepad-plus-plus/notepad-plus-plus/releases/download/v%latest%/npp.%latest%.Installer.x64.exe
 npp.%latest%.Installer.x64.exe
 del npp.%latest%.Installer.x64.exe
