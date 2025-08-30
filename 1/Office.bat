@@ -1,4 +1,4 @@
 @echo off
-curl -# -Lo office.zip "https://otp.landian.vip/redirect/download.php?type=runtime&site=sdumirror"
-powershell Expand-Archive -Path office.zip -DestinationPath %~dp0 -Force
-del office.zip
+curl -# -o officetool.zip https://acc.189168.xyz/officetool
+powershell Expand-Archive -Path officetool.zip -DestinationPath %~dp0 -Force
+del officetool.zip
